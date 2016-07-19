@@ -1,28 +1,33 @@
-@import "settings/variables/_color.scss";
+@import 'settings/variables/color';
 
-.tree-list{
-  background-color : $black;
-  padding : 0px;
-}
-
-.tree-ul{
-  -webkit-padding-start: 0px;
-}
-.treeview{
-  margin-bottom: 0px;
-  padding : 0px;
+.tree-list {
+  background-color: $black;
+  padding: 0;
 }
 
-.list-group-item.tree-li.active{
-  background-color : $black /1.5
+.tree-ul {
+  -webkit-padding-start: 0;
 }
-.list-group-item.tree-li{
-  outline: 0px;
-  background-color : $black;
-  border-color: $black / 1.2;
-  color: $white;
-  border-top-left-radius: 0px;
-  border-top-right-radius: 0px;
-  border-left: 0px;
-  border-radius: 0px;
+
+.treeview {
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.list-group-item {
+
+  &.tree-li {
+    background-color: $black;
+    border-color: $black / 1.2;
+    border-left: 0;
+    border-radius: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    color: $white;
+    outline: 0;
+
+    &.active {
+      background-color: $black / 1.5;
+    }
+  }
 }

@@ -1,46 +1,47 @@
-@import "settings/variables/_color.scss";
+@import 'settings/variables/color';
 
-div.recent-list{
+.recent-list {
   height: 100%;
-  ul{
-    div.resent-post-header{
-      h4{
-        margin-top: 16px;
-        margin-bottom: 1px;
-      }
-    }
-    div.resent-post-list{
-      height: 600px;
-      overflow: auto;
-      li.resent-post-list{
-        border-top-left-radius: 0px;
-        border-top-right-radius: 0px;
-        border-left: 0px;
-        border-right: 0px;
-        span.path{
-          color : $black;
-          font-size: 0.8em;
-        }
-        h4.title{
-          a{
-            color:$black;
+}
 
-          }
-          a:hover{/*マウスをのせたとき*/
-            color:$sub-color;
-            font-style:normal;
-            text-decoration:none;
-            cursor:pointer;
-          }
-        }
-        p.updated-user-name{
-          text-align : right;
-          color: $black;
-          font-size: 0.8em;
-        }
+.resent-post-list {
+  border-left: 0;
+  border-right: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  height: 600px;
+  overflow: auto;
+
+  .path {
+    color: $black;
+    font-size: .8em;
+  }
+
+  .title {
+
+    a {
+      color: $black;
+
+      &:hover {/*マウスをのせたとき*/
+        color: $sub-color;
+        cursor: pointer;
+        font-style: normal;
+        text-decoration: none;
       }
     }
   }
+
+  .updated-user-name {
+    color: $black;
+    font-size: .8em;
+    text-align: right;
+  }
 }
 
+.resent-post-header {
 
+  h4 {
+    margin-bottom: 1px;
+    margin-top: 16px;
+  }
+}

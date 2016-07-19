@@ -1,58 +1,62 @@
-@import "settings/variables/_color.scss";
+@import 'settings/variables/color';
 
-
-.css-tag{
-  display: inline-block;
-  position: relative;
-  margin: 0 15px 0 0;
-  padding: 0;
-  min-width: 40px;
-  height: 20px;
+.css-tag {
   background: $gley-1;
+  display: inline-block;
+  height: 20px;
+  margin: 0 15px 0 0;
+  min-width: 40px;
+  padding: 0;
+  position: relative;
   text-align: center;
 
-  span{
-    color: #FFF;
+  span {
+    color: $white;
   }
 
+  &::before {
+    background: $white;
+    border-radius: 50%;
+    content: '';
+    display: block;
+    height: 4px;
+    margin-top: -2px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 4px;
+  }
+
+  &::after {
+    border: 10px solid transparent;
+    border-left-color: $gley-1;
+    content: '';
+    display: block;
+    height: 0;
+    left: 100%;
+    position: absolute;
+    top: 0;
+    width: 0;
+  }
+
+  &.form {
+    padding-left: 16px;
+
+    &::before {
+      color: $white;
+      content: '✖';
+      display: block;
+      font-size: 12px;
+      height: 0;
+      left: 4px;
+      position: absolute;
+      top: 10px - 6;
+      width: 0;
+    }
+
+    &:hover {
+      color: $base-color;
+    }
+  }
 }
-.css-tag:before{
-  display: block;
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: 0;
-  width: 4px;
-  height: 4px;
-  margin-top: -2px;
-  border-radius: 50%;
-  background: #fff;
-}
-.css-tag:after{
-  display: block;
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 100%;
-  width: 0;
-  height: 0;
-  border: 10px solid transparent;
-  border-left-color: $gley-1;
-}
-.css-tag.form{
-  padding-left: 16px;
-}
-.css-tag.form:before{
-  display: block;
-  content: "✖";
-  position: absolute;
-  font-size: 12px;
-  top: 10px - 6;
-  left: 4px;
-  width: 0;
-  height: 0;
-  color: $white;
-}
-.css-tag.form:hover{
-  color: $base-color;
-}
+

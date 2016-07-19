@@ -1,19 +1,21 @@
-@import "settings/variables/_color.scss";
+@import 'settings/variables/color';
 
 .navbar-default {
   background-color: $light-color;
 
   border-color: $base-color;
-  border-radius: 0px;
-  .navbar-nav{
-    .active{
-      a{
-        color : $white;
-        background-color: $base-color;
-      }
+
+}
+
+.navbar-nav {
+
+  .active {
+
+    a {
+      background-color: $base-color;
+      color: $white;
     }
   }
 }
-
 
 

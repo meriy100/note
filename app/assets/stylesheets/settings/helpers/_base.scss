@@ -1,40 +1,45 @@
-@import "settings/variables/_color.scss";
+@import 'settings/variables/color';
 
-.is-inline-blocks{
+.is-inline-blocks {
   font-size: 0;
 }
-.is-display-block{
+
+.is-display-block {
   display: block;
 }
-.is-display-none{
+
+.is-display-none {
   display: none;
 }
 
-.is-align-center{
+.is-align-center {
   text-align: center;
 }
 
-.is-float-left{
+.is-float-left {
   float: left;
 }
 
-.is-left{
-  left : 0;
+.is-left {
+  left: 0;
 }
 
-.is-right{
+.is-right {
   float: right;
 }
 
+a {
 
-a.click-show{
-  color : $black;
-}
+  .click-show {
+    color: $black;
+  }
 
-a.click-edit{
-  color: $base-color;
-}
-a.click-destroy{
-  color: $black;
+  .click-edit {
+    color: $base-color;
+  }
+
+  .click-destroy {
+    color: $black;
+  }
 }
 
